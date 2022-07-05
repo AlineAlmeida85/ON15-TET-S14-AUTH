@@ -17,7 +17,6 @@ const createLanche = async (req, res) => {
             description: req.body.description,
             category: req.body.category
         })
-        console.log("NOVO LANCHE", newLanche);
 
         const savedLanche = await newLanche.save();
 
@@ -48,9 +47,8 @@ const updateLanche = async (req, res) => {
         findLanche.title = req.body.title || findLanche.title
         findLanche.price = req.body.price || findLanche.price
         findLanche.description = req.body.description || findLanche.description
-        findLanche.category = req.body.category || findLanche.category        
+        findLanche.category = req.body.category || findLanche.category
         
-        console.log("Lanche Atualizado", findLanche)
         const savedLanche = await findLanche.save()
         
         res.status(200).send({
