@@ -215,3 +215,7 @@ jwt.verify(token, SECRET, function(erro) {
     return res.status(403).send('Não autorizado');
 }
 ~~~
+
+## Para o Lar
+
+#### aplicarautenticação em todas as rotas de um projeto que ja tenha banco de dados.
